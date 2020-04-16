@@ -1,21 +1,18 @@
-// TODO: dear user, please change this to your own instance
-const netlifyInstance = "https://jamstack-hackathon-starter.netlify.com"
-if (netlifyInstance === "https://jamstack-hackathon-starter.netlify.com") {
+const netlifyInstance = "https://habitcureit.netlify.com"
+if (netlifyInstance === "") {
   console.warn(`
-
 **************************
-WARNING: currently using Netlify Identity of https://jamstack-hackathon-starter.netlify.com
-
-this is only meant for the working demo. if you forked or copied this code, you won't have access to this netlify identity instance
-
-Go to your site, enable Netlify Identity, and paste that string here
-
-
-More docs: https://www.netlify.com/docs/identity/
-
+https://www.netlify.com/docs/identity/
 **************************
 `)
 }
+
+// {
+//   resolve: `gatsby-plugin-netlify-identity`,
+//   options: {
+//     url: netlifyInstance,
+//   },
+// },
 
 module.exports = {
   siteMetadata: {
@@ -29,12 +26,6 @@ module.exports = {
     {
       resolve: `gatsby-plugin-create-client-paths`,
       options: { prefixes: [`/app/*`] },
-    },
-    {
-      resolve: `gatsby-plugin-netlify-identity`,
-      options: {
-        url: netlifyInstance,
-      },
     },
     {
       resolve: `gatsby-source-filesystem`,

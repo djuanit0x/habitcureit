@@ -1,0 +1,9 @@
+type Habit {
+    name: String!
+    date: String!
+    link: String
+}
+
+type Query {
+  allHabits: [Habit!]!
+}

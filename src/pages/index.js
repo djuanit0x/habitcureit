@@ -11,7 +11,7 @@ class IndexPage extends React.Component {
     e.preventDefault()
 
     this.setState({ loading: true })
-    fetch("/.netlify/functions/token-hider")
+    fetch("/.netlify/functions/get-all-habits")
       .then(response => response.json())
       .then(json => this.setState({ loading: false, msg: json.message }))
   }
@@ -57,8 +57,8 @@ class IndexPage extends React.Component {
             <p>
               You can still access Netlify functions even on static "marketing
               pages". This function is available at{" "}
-              <a href="/.netlify/functions/token-hider">
-                <code>/.netlify/functions/token-hider</code>
+              <a href="/.netlify/functions/get-all-habits">
+                <code>/.netlify/functions/get-all-habits</code>
               </a>{" "}
               and it uses an API_SECRET environment variable that is hidden from
               the frontend!
