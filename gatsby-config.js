@@ -7,13 +7,6 @@ https://www.netlify.com/docs/identity/
 `)
 }
 
-// {
-//   resolve: `gatsby-plugin-netlify-identity`,
-//   options: {
-//     url: netlifyInstance,
-//   },
-// },
-
 module.exports = {
   siteMetadata: {
     title: "Habitcureit",

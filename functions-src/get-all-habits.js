@@ -25,6 +25,6 @@ exports.handler = async () => {
 
   return {
     statusCode: 200,
-    body: JSON.stringify({ todos: data.allHabits.data })
+    body: JSON.stringify({ habits: data.allHabits.data })
   };
 };
